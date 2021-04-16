@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     // text-align: justify;
+    transition: transform 2s ease-out;
 }
 body {
     overflow-x: hidden;
@@ -128,8 +129,62 @@ body {
 
 // landing page 
 .landing {
-    height: 400px;
+    height: 450px;
     background: #f2f2f2;
+    
+    .container {
+        position: relative;
+        vertical-align: middle;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        
+        .roller-text {
+            width: 50%;
+            display: inline-block;
+            position: relative;
+
+            .second-text {
+                height: 40px;
+                overflow: hidden;
+                position: relative;
+                box-sizing: border-box;
+
+                h2 {
+                    display: block;
+                    margin: 0;
+                    height: 40px;
+                    box-sizing: border-box;
+                    top: 0;
+                    transition: transform 1.2s ease-out;
+                    transform: translateY(-100%);
+                }
+
+            }
+        }
+    }
+}
+
+.features {
+    width: 100%;
+    background: #1e2232;
+    color: white;
+    padding: 30px;
+
+    .heading {
+        color: #f2f2f2;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .content {
+        ul {
+            list-style-image: url('/assets/check.svg');
+            
+            li::marker {
+                font-size: 2rem;
+            }
+        }
+    }
 }
 
 
@@ -145,26 +200,42 @@ body {
         padding: 30px;
 
         .links {
-            padding: 50px;
+            // padding: 50px;
             display: flex;
             justify-content: space-around;
             @media (max-width: 800px) {
                 padding: 0;
+                flex-direction: column;
             }
 
             .blue-btn {
-                // box-shadow: 0 0 3px 6px rgba(106, 53, 230, 0.3);
+                box-shadow: 0 0 3px 6px rgba(106, 53, 230, 0.1);
                 color: blueviolet;
-
+                width: 100%;
+                margin: 5px;
+                .link-text {
+                    font-size: 0.8rem;
+                    font-weight: bolder;
+                    vertical-align: middle;
+                }
                 .material-icons {
                     vertical-align: middle;
+                    margin-left: 5px;
                 }
             }
             .pink-btn {
-                // box-shadow: 0 0 3px 6px rgba(86, 21, 192, 0.3);
+                box-shadow: 0 0 3px 6px rgba(86, 21, 192, 0.1);
                 color: blueviolet;
+                width: 100%;
+                margin: 5px;
+                .link-text {
+                    font-size: 0.8rem;
+                    font-weight: bolder;
+                    vertical-align: middle;
+                }
                 .material-icons {
                     vertical-align: middle;
+                    margin-left: 5px;
                 }
             }
         }
@@ -251,7 +322,7 @@ body {
     background: #e9e0e8;
 
     .para {
-        width: 50%;
+        width: 60%;
         padding: 30px;
 
         @media (max-width: 800px) {
@@ -260,7 +331,8 @@ body {
     }
     
     .cara {
-        width: 50%;
+        width: 30%;
+        margin: auto;
         padding: 50px 30px;
         text-align: center;
 
